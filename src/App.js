@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Routes,Route} from 'react-router-dom';
-import {Home, About, Events, Contact, Whoops404} from './pages';
+import {Home, About, Events, Contact, Whoops404, Services} from './pages';
 
 // https://api.github.com/users/inspire99
 
@@ -14,7 +14,9 @@ function App() {
     <Routes>
 
       <Route  path="/" element = {<Home />}/>
-      <Route  path="/about/" element ={<About />}/>
+      <Route  path="/about/" element ={<About />}>
+        <Route path="services" element={<Services />} />
+        </Route>
       <Route  path="/contact" element={<Contact />} />
       <Route  path="/events/" element={<Events />}/>
       <Route path="*" element={<Whoops404 />} />

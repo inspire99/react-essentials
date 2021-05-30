@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import {Link, useLocation, Outlet} from 'react-router-dom';
 
 export function Home(){
     return(
@@ -17,6 +17,7 @@ export function About(){
     return(
         <div>
             <h1>[About]</h1>
+            <Outlet />
         </div>
     );
 }
@@ -43,6 +44,15 @@ export function Whoops404(){
     return(
         <div>
             <h1>This resource at {location.pathname} does not exist</h1>
+        </div>
+    );
+}
+
+export function Services(){
+    
+    return(
+        <div>
+            <h1>[Company Services]</h1>
         </div>
     );
 }
