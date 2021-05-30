@@ -1,44 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import './App.css';
-
-
-
-
 
 function App({authorized}) {
 
-  const [emotion, setEmotion] = useState("happy");
-  const [secondary, setSecondary] = useState("tired");
+  const [checked, setChecked] = useState(false);
 
-  useEffect( () => {
-    console.log(`It's ${emotion} here`);
-  },[emotion]
-  
-
-  );
-
-  useEffect( () => {
-    console.log(`It's ${secondary} here`);
-  },[secondary]
-
-  );
-  
+  function toggle(){
+    setChecked( (checked) => !checked );
+  }
 
   return(
     <>
-    <h1>Current state of emotion is {emotion} and {secondary}</h1>
-    <button onClick={() => setEmotion("happy")}>
-      Make Happy
-    </button>
-    <button onClick={() => setSecondary("crappy")}>
-      Make crappy
-    </button>
-    <button onClick={() => setEmotion("frustrated")}>
-      Frustrated
-    </button>
-    <button onClick={() => setEmotion("enthusiastic")}>
-      Enthuse
-    </button>
+      <input type="checkbox" value={checked} 
+      onChange={ toggle }/>
+      <p>{checked ? "checked": "not checked"}</p>
     </>
   );
   
