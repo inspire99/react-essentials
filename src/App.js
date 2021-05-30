@@ -5,11 +5,20 @@ import './App.css';
 
 
 function App({authorized}) {
-  const [emotion] = useState("happy");
+  const [emotion, setEmotion] = useState("happy");
   console.log(emotion);
   return(
     <>
-    <h1>Hello</h1>
+    <h1>Current state of emotion is {emotion}</h1>
+    <button onClick={() => setEmotion("happy")}>
+      Happy
+    </button>
+    <button onClick={() => setEmotion("frustrated")}>
+      Frustrated
+    </button>
+    <button onClick={() => setEmotion("enthusiastic")}>
+      Enthuse
+    </button>
     </>
   );
   
