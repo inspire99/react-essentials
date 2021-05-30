@@ -6,7 +6,7 @@ import App from './App';
 
 ReactDOM.render(
 
-  <App authorized={true}/>
+  <App login={"inspire99"}/>
 ,
   document.getElementById('root')
 );
