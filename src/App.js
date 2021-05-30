@@ -5,8 +5,8 @@ import './App.css';
 
 
 function App({authorized}) {
-  const what = useState();
-  console.log(what);
+  const [emotion] = useState("happy");
+  console.log(emotion);
   return(
     <>
     <h1>Hello</h1>
