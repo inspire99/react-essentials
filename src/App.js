@@ -1,24 +1,15 @@
-
+import React, {useState} from 'react';
 import './App.css';
 
 
-function SecretComponent(){
-  return(
-    <h1>Only authorized users can view secret information</h1>
-  );
-}
-
-function RegularComponent(){
-  return(
-    <h1>Everyone can see this component</h1>
-  );
-}
 
 
 function App({authorized}) {
+  const what = useState();
+  console.log(what);
   return(
     <>
-    {authorized ? <SecretComponent /> : <RegularComponent />}
+    <h1>Hello</h1>
     </>
   );
   
