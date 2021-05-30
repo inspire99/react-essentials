@@ -15,10 +15,10 @@ function RegularComponent(){
 }
 
 
-function App(props) {
+function App({authorized}) {
   return(
     <>
-    {props.authorized ? <SecretComponent /> : <RegularComponent />}
+    {authorized ? <SecretComponent /> : <RegularComponent />}
     </>
   );
   
